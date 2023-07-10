@@ -1,4 +1,6 @@
-﻿namespace Buscaminas
+﻿using Buscaminas.GameConfig;
+
+namespace Buscaminas
 {
     partial class Main
     {
@@ -54,7 +56,7 @@
             easy.Size = new Size(89, 19);
             easy.TabIndex = 2;
             easy.TabStop = true;
-            easy.Text = "Easy (20x20)";
+            easy.Text = Data._easy.Text;
             easy.UseVisualStyleBackColor = true;
             // 
             // medium
@@ -64,9 +66,8 @@
             medium.Name = "medium";
             medium.Size = new Size(111, 19);
             medium.TabIndex = 3;
-            medium.Text = "Medium (25x25)";
+            medium.Text = Data._medium.Text;
             medium.UseVisualStyleBackColor = true;
-            medium.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // hard
             // 
@@ -75,7 +76,7 @@
             hard.Name = "hard";
             hard.Size = new Size(92, 19);
             hard.TabIndex = 4;
-            hard.Text = "Hard (30x30)";
+            hard.Text = Data._hard.Text;
             hard.TextAlign = ContentAlignment.MiddleCenter;
             hard.UseVisualStyleBackColor = true;
             // 

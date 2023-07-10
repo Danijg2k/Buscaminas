@@ -1,4 +1,5 @@
 using Buscaminas.Layout;
+using Buscaminas.GameConfig;
 
 namespace Buscaminas
 {
@@ -14,24 +15,24 @@ namespace Buscaminas
 
         }
 
-        // 
+        // When play button is clicked
         private void play_Click(object sender, EventArgs e)
         {
             Board board;
             // Easy mode
             if (easy.Checked)
             {
-                board = new Board(easy.Text, 8, 10, 10);
+                board = new Board(Data._easy);
             }
             // Medium mode
             else if (medium.Checked)
             {
-                board = new Board(medium.Text, 14, 18, 40);
+                board = new Board(Data._medium);
             }
             // Hard mode
             else if (hard.Checked)
             {
-                board = new Board(hard.Text, 20, 24, 99);
+                board = new Board(Data._hard);
             }
             // Custom mode
             //else if (custom.Checked)
@@ -45,16 +46,6 @@ namespace Buscaminas
             }
             // Show the board
             board.Show();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
